@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+  <head th:replace="/fragments/fragments :: header" />
+
+  <body>
+    <div class="container">
+      <div th:replace="/fragments/fragments :: navbar" />
+      <div class="banner">
+        <table class="table">
+          <caption>
+            Our Coffee
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Description</th>
+              <th scope="col">Price/lb</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Robust Flavor</td>
+              <td>
+                Our best-selling blend of the finest dark roast beans on the
+                planet.
+              </td>
+              <td>$12.99</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Weak Flavor</td>
+              <td>For those who haven't succumbed to the dark side.</td>
+              <td>$10.99</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Medium Flavor</td>
+              <td>Meh, it's coffee.</td>
+              <td>$11.99</td>
+            </tr>
+          </tbody>
+        </table>
+        <a th:href="@{/reviews}"
+          ><button class="btn btn-primary">Check Out Our Reviews</button></a
+        >
+        <a th:href="@{/new}"
+          ><button class="btn btn-primary">Submit a New Review</button></a
+        >
+      </div>
+    </div>
+    <div th:replace="/fragments/fragments :: footer" />
+    <div th:replace="/fragments/fragments :: bscripts" />
+  </body>
+</html>

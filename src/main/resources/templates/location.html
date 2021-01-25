@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head th:replace="/fragments/fragments :: header" />
+
+  <body>
+    <div class="container">
+      <div th:replace="/fragments/fragments :: navbar" />
+      <div class="banner container-fluid m-0 p-0">
+        <!--Google map-->
+        <div
+          id="map-container-google-3"
+          class="z-depth-1-half map-container-3"
+          style="height: 500px"
+        >
+          <iframe
+            src="https://maps.google.com/maps?q=warsaw&t=k&z=13&ie=UTF8&iwloc=&output=embed"
+            frameborder="0"
+            style="border: 0; height: 500px; width: 800px"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div th:replace="/fragments/fragments :: footer" />
+    <div th:replace="/fragments/fragments :: bscripts" />
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+  <head th:replace="/fragments/fragments :: header" />
+
+  <body>
+    <div class="container">
+      <div th:replace="/fragments/fragments :: navbar" />
+      <div class="banner">
+        <h1 class="animated fadeInDown">Good Coffee Co.</h1>
+      </div>
+      <div id="mission" class="container-fluid mission">
+        <div class="row">
+          <h3>
+            Here at Good Coffee Co we are passionate about serving the best
+            coffee you'll ever taste. <br />
+            Our staff are self-described coffee-nerds with impeccable technique.
+            <br />
+            Stop by today and experience the Good Coffee difference.
+          </h3>
+        </div>
+        <div class="container features">
+          <div class="row">
+            <div class="col-xs-12 col-sm-4">
+              <img
+                class="img-responsive"
+                src="http://upload.wikimedia.org/wikipedia/commons/3/3f/Coffee_Beans.jpg"
+              />
+              <p>
+                The freshest locally sourced coffee. Organic and Fair Trade
+                certified
+              </p>
+            </div>
+
+            <div class="col-xs-12 col-sm-4">
+              <img
+                class="img-responsive"
+                src="http://pixabay.com/static/uploads/photo/2014/07/15/13/36/coffee-shop-393954_640.jpg"
+              />
+              <p>
+                A perfect environment to meet with a friend or be alone and get
+                work done.
+              </p>
+            </div>
+
+            <div class="col-xs-12 col-sm-4">
+              <img
+                class="img-responsive"
+                src="http://pixabay.com/static/uploads/photo/2013/11/05/23/55/coffee-206142_640.jpg"
+              />
+              <p>
+                Quality hand-crafted espresso shots pulled with the greatest of
+                care.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div th:replace="/fragments/fragments :: footer" />
+    <div th:replace="/fragments/fragments :: bscripts" />
+  </body>
+</html>

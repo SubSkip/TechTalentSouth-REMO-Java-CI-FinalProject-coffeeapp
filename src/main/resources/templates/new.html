@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head th:replace="/fragments/fragments :: header" />
+  <body>
+    <div class="container">
+      <div th:replace="/fragments/fragments :: navbar" />
+      <div class="banner">
+        <h2>Create a New Review</h1>
+        <form
+          action="#"
+          th:action="@{/new}"
+          th:object="${coffee}"
+          method="post"
+        >
+          <div class="form-group">
+            <select th:field="*{product}">
+              <option th:value="'Robust Flavor'">Robust Flavor</option>
+              <option th:value="'Weak Flavor'">Weak Flavor</option>
+              <option th:value="'Medium Flavor'">Medium Flavor</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Your Name Here..."
+              th:field="*{author}"
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Your review"
+              th:field="*{coffeeReview}"
+            />
+          </div>
+
+          <button class="btn btn-primary">Submit Your Review!</button>
+        </form>
+      </div>
+    </div>
+    <div th:replace="/fragments/fragments :: footer" />
+    <div th:replace="/fragments/fragments :: bscripts" />
+  </body>
+</html>
